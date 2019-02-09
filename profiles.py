@@ -42,27 +42,26 @@ class Profile:
     def __str__(self):
         return str(self.name)
 
-    # def find_hated(self,profileList):
-    #     hatred = 0
-    #     for profile in profileList:
-    #         if (profileList[p].gender != self.genderPreference) or not(profileList[p].age.yours in self.age.preference) or (self.gender != profileList[p].genderPreference) or not (self.age.yours in profileList[p].age.preference) :
-    #             continue
-    #         for k in self.__dict__:
-    #             if k == "name" or k == "gender" or k == "genderPreference":
-    #                 continue
-    #             elif k == "height" or k == "weight" or k == "age":
-    #                 val = abs(self.__dict__[k].yours-profileList[p].__dict__[k].yours)**2/100
-    #                 if val <= 5:
-    #                     hatred += val
-    #                 else:
-    #                     hatred += 5
-    #             else:
-    #                 if self.__dict__[k].yours != profileList[p].__dict__[k].yours:
-    #                     hatred += 1
+    def find_hated(self,profileList):
+        hatred = 0
+        for profile in profileList:
+            if (profileList[p].gender != self.genderPreference) or not(profileList[p].age.yours in self.age.preference) or (self.gender != profileList[p].genderPreference) or not (self.age.yours in profileList[p].age.preference) :
+                continue
+            for k in self.__dict__:
+                if k == "name" or k == "gender" or k == "genderPreference":
+                    continue
+                elif k == "height" or k == "weight" or k == "age":
+                    val = abs(self.__dict__[k].yours-profileList[p].__dict__[k].yours)**2/100
+                    if val <= 5:
+                        hatred += val
+                    else:
+                        hatred += 5
+                else:
+                    if self.__dict__[k].yours != profileList[p].__dict__[k].yours:
+                        hatred += 1
 
 
-        # matchList.append(Oppositeness)
-
+        matchList.append(Oppositeness)
     def find_opposite(self,profileList):
 
         matchList = []
