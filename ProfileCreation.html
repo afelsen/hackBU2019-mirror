@@ -8,289 +8,268 @@
   <link href="https://fonts.googleapis.com/css?family=Cairo|Pontano+Sans|Rajdhani|Raleway|Ropa+Sans" rel="stylesheet">
   </head>
   <body>
-    <h1> Create Your Profile! </h1>
 
-        <p> Name: </p>
-        <input id = "questionnare" type = "text"> <br>
+    <h1 id = "profileTitle"> Create Your Profile! </h1>
+    <form action="/action_page.php">
+      <fieldset>
+        <legend id = "profileTitle">Personal information:</legend>
+        <div id = "profileTitle"> Name: </div>
+        <input id = "textBox" type="text" name="firstname" value="">
         <br>
-        <p>Gender:</p>
+        <br>
+        <br>
+
+        <div id = "profileTitle"> Gender: </div>
         <div>
-          <input id = "questionnare" type="radio" id="Gender1">
-          <label for="Gender">Male</label>
-
-          <input id = "questionnare" type="radio" id="Gender2">
-          <label for="contactChoice2">Female</label>
-
-          <input id = "questionnare" type="radio" id="Gender3">
-          <label for="Gender3">Other</label>
+          <input type="radio" name="pgender" value="male" checked> Male
+          <input type="radio" name="pgender" value="female"> Female
+          <input type="radio" name="pgender" value="other"> Other
         </div>
+        <br>
 
-        <p>Preferred Gender:</p>
+        <div id = "profileTitle"> Preferred Gender: </div>
         <div>
-          <input id = "questionnare" type="radio" id="pGender1">
-          <label for="Gender">Male</label>
-
-          <input id = "questionnare" type="radio" id="pGender2">
-          <label for="contactChoice2">Female</label>
-
-          <input id = "questionnare" type="radio" id="pGender3">
-          <label for="Gender3">Other</label>
+          <input type="radio" name="gender" value="male" checked> Male
+          <input type="radio" name="gender" value="female"> Female
+          <input type="radio" name="gender" value="other"> Other
         </div>
+        <br>
+        <br>
 
-        <p> Height: </p>
-        <input id = "questionnare" type = "text"> <br>
+        <div id = "profileTitle"> Age: </div>
+        <input id = "textBox" type="text" name="Age" value="">
+        <br>
+        <br>
 
-        <p> Preferred Height </p>
+        <div id = "profileTitle">Preferred Age</div>
         <div>
-          <input id = "questionnare" type="radio" id="pHeight1">
-          <label for="pHeight1"> < 5' </label>
-
-          <input id = "questionnare" type="radio" id="pHeight2">
-          <label for="pHeight2">5'4" - 5'8"</label>
-
-          <input id = "questionnare" type="radio" id="pHeight3">
-          <label for="pHeight3">5'8" - 6'</label>
-
-          <input id = "questionnare" type="radio" id="pHeight4">
-          <label for="pHeight4">5'8" - 6'</label>
-
-          <input id = "questionnare" type="radio" id="pHeight5">
-          <label for="pHeight5">> 6'</label>
+          <input type="checkbox" name = "pAge1" value = "[18,21]">  18-21
+            <input type="checkbox" name = "pAge2" value = "[21,24]"> 21-24
+          <input type="checkbox" name = "pAge3" value = "[24-27]"> 24-27
+          <input type="checkbox" name = "pAge4" value = "[27-30]"> 27-30
+         <input type="checkbox" name = "pAge2" value = "[30,100]"> 30+
         </div>
+        <br>
+        <br>
 
-        <p>Importance: </p>
-        <select>
-          <option value=1>1</option>
-          <option value=2>2</option>
-          <option value=3>3</option>
-          <option value=4>4</option>
-          <option value=5>5</option>
-          <option value=6>6</option>
-          <option value=7>7</option>
-          <option value=8>8</option>
-          <option value=9>9</option>
-          <option value=10>10</option>
-        </select>
+        <div id = "profileTitle">Height: </div>
+        <input id= "textBox" type="text" name="Height" value="">
+        <br>
+        <br>
 
-        <p> Age: </p>
-        <input id = "questionnare" type = "text"> <br>
-
-        <p> Preferred Age </p>
+        <div id = "profileTitle">Preferred Height</div>
         <div>
-          <input id = "questionnare" type="radio" id="pAge1">
-          <label for="pAge1"> 18-21 </label>
+          <input type="checkbox" name = "pHeight" value = "[0,60]"> < 5'
 
-          <input id = "questionnare" type="radio" id="pAge2">
-          <label for="pAge2"> 21- 25</label>
+          <input type="checkbox" name = "pHeight" value = "[60,64]"> 5' - 5'4"
 
-          <input id = "questionnare" type="radio" id="pAge3">
-          <label for="pAge3">25-30</label>
+          <input type="checkbox" name = "pHeight" value = "[64,68]"> 5'4" - 5'8"
 
-          <input id = "questionnare" type="radio" id="pAge4">
-          <label for="pAge4">30-35</label>
+          <input type="checkbox" name = "pHeight" value = "[68,72]"> 5'8" - 6'
 
-          <input id = "questionnare" type="radio" id="pAge5">
-          <label for="pAge5"> 35+ </label>
+          <input type="checkbox" name = "pHeight" value = "[68,72]"> > 6'
+
+          <br>
+          Importance
+          <select>
+            <option value=1>1</option>
+            <option value=2>2</option>
+            <option value=3>3</option>
+            <option value=4>4</option>
+            <option value=5>5</option>
+            <option value=6>6</option>
+            <option value=7>7</option>
+            <option value=8>8</option>
+            <option value=9>9</option>
+            <option value=10>10</option>
+          </select>
         </div>
-
-        <p>Importance: </p>
-        <select>
-          <option value=1>1</option>
-          <option value=2>2</option>
-          <option value=3>3</option>
-          <option value=4>4</option>
-          <option value=5>5</option>
-          <option value=6>6</option>
-          <option value=7>7</option>
-          <option value=8>8</option>
-          <option value=9>9</option>
-          <option value=10>10</option>
-        </select>
+        <br>
+        <br>
 
 
-        <p> Religion </p>
+
+        <div id = "profileTitle">Religion</div>
         <div>
-          <input id = "questionnare" type="radio" id="Religion1">
-          <label for="Religion1"> Christianity </label>
+          <input type="radio" name = "Religion" value = "Christianity"> Christianity
 
-          <input id = "questionnare" type="radio" id="Religion2">
-          <label for="Religion2"> Judaism </label>
+          <input type="radio" name = "Religion" value = "Judaism"> Judaism
 
-          <input id = "questionnare" type="radio" id="Religion3">
-          <label for="Religion3"> Islam </label>
+          <input type="radio" name = "Religion" value = "Islam"> Islam
 
-          <input id = "questionnare" type="radio" id="Religion4">
-          <label for="Religion4"> Hinduism </label>
+          <input type="radio" name = "Religion" value = "Hinduism"> Hinduism
 
-          <input id = "questionnare" type="radio" id="Religion5">
-          <label for="Religion5"> Other/None </label>
+          <input type="radio" name = "Religion" value = "Other/None"> Other/None
+
+          <br>Importance that partner has the same religion
+          <select>
+            <option value=1>1</option>
+            <option value=2>2</option>
+            <option value=3>3</option>
+            <option value=4>4</option>
+            <option value=5>5</option>
+            <option value=6>6</option>
+            <option value=7>7</option>
+            <option value=8>8</option>
+            <option value=9>9</option>
+            <option value=10>10</option>
+          </select>
         </div>
+        <br>
+        <br>
 
-        <p>Importance that partner has the same religion: </p>
-        <select>
-          <option value=1>1</option>
-          <option value=2>2</option>
-          <option value=3>3</option>
-          <option value=4>4</option>
-          <option value=5>5</option>
-          <option value=6>6</option>
-          <option value=7>7</option>
-          <option value=8>8</option>
-          <option value=9>9</option>
-          <option value=10>10</option>
-        </select>
-
-
-        <p> Politics </p>
+        <div id = "profileTitle">Politics</div>
         <div>
-          <input id = "questionnare" type="radio" id="Politics1">
-          <label for="Politics1"> Republican </label>
+          <input type="radio" name = "Politics" value = "Democrat"> Democrat
 
-          <input id = "questionnare" type="radio" id="Politics2">
-          <label for="Politics2"> Democrat </label>
+          <input type="radio" name = "Politics" value = "Republican"> Republican
 
-          <input id = "questionnare" type="radio" id="Politics3">
-          <label for="Politics3"> Independent </label>
+          <input type="radio" name = "Politics" value = "Independent"> Independent
 
-          <input id = "questionnare" type="radio" id="Politics4">
-          <label for="Politics4"> Other </label>
+          <input type="radio" name = "Politics" value = "Other"> Other
+      </div>
+
+          <br>
+          <div>Importance that partner has the same politcs
+          <select>
+            <option value=1>1</option>
+            <option value=2>2</option>
+            <option value=3>3</option>
+            <option value=4>4</option>
+            <option value=5>5</option>
+            <option value=6>6</option>
+            <option value=7>7</option>
+            <option value=8>8</option>
+            <option value=9>9</option>
+            <option value=10>10</option>
+          </select>
         </div>
+        <br>
+        <br>
 
-        <p>Importance that partner has the same politics: </p>
-        <select>
-          <option value=1>1</option>
-          <option value=2>2</option>
-          <option value=3>3</option>
-          <option value=4>4</option>
-          <option value=5>5</option>
-          <option value=6>6</option>
-          <option value=7>7</option>
-          <option value=8>8</option>
-          <option value=9>9</option>
-          <option value=10>10</option>
-        </select>
-
-
-        <p> Are you an introvert or an extrovert? </p>
+        <div id = "profileTitle">Are you an introvert or an extrovert?</div>
         <div>
-          <input id = "questionnare" type="radio" id="IntroExtro1">
-          <label for="IntroExtro1"> Introvert </label>
+          <input type="radio" name = "IntroExtro" value = "Introvert">  Introvert
 
-          <input id = "questionnare" type="radio" id="IntroExtro2">
-          <label for="IntroExtro2"> Extrovert </label>
+          <input type="radio" name = "IntroExtro" value = "Extrovert">  Extrovert
         </div>
+        <br>
 
-        <p>Importance: </p>
-        <select>
-          <option value=1>1</option>
-          <option value=2>2</option>
-          <option value=3>3</option>
-          <option value=4>4</option>
-          <option value=5>5</option>
-          <option value=6>6</option>
-          <option value=7>7</option>
-          <option value=8>8</option>
-          <option value=9>9</option>
-          <option value=10>10</option>
-        </select>
-
-
-        <p> Do you smoke? </p>
+        <div id = "profileTitle">Would you like your partner to be an introvert or an extrovert?</div>
         <div>
-          <input id = "questionnare" type="radio" id="Smoke1">
-          <label for="Smoke1"> Yes </label>
+          <input type="radio" name = "IntroExtro" value = "Introvert">  Introvert
 
-          <input id = "questionnare" type="radio" id="Smoke2">
-          <label for="Smoke2"> No </label>
+          <input type="radio" name = "IntroExtro" value = "Extrovert">  Extrovert
+
+          <br>
+          Importance:
+          <select>
+            <option value=1>1</option>
+            <option value=2>2</option>
+            <option value=3>3</option>
+            <option value=4>4</option>
+            <option value=5>5</option>
+            <option value=6>6</option>
+            <option value=7>7</option>
+            <option value=8>8</option>
+            <option value=9>9</option>
+            <option value=10>10</option>
+          </select>
         </div>
+        <br>
+        <br>
 
-
-        <p> Would you be okay with your partner smoking? </p>
+        <div id = "profileTitle">Do you smoke? </div>
         <div>
-          <input id = "questionnare" type="radio" id="Smoke1">
-          <label for="Smoke1"> Yes </label>
-
-          <input id = "questionnare" type="radio" id="Smoke2">
-          <label for="Smoke2"> No </label>
+            <input type="radio" name = "Smoker" value = "Yes"> Yes
+          <input type="radio" name = "Smoker" value = "No">  No
         </div>
-
-        <p>Importance: </p>
-        <select>
-          <option value=1>1</option>
-          <option value=2>2</option>
-          <option value=3>3</option>
-          <option value=4>4</option>
-          <option value=5>5</option>
-          <option value=6>6</option>
-          <option value=7>7</option>
-          <option value=8>8</option>
-          <option value=9>9</option>
-          <option value=10>10</option>
-        </select>
-
-
-        <p> Do you consider yourself messy or neat? </p>
+        <br>
+        <div id = "profileTitle">Would you be okay with your partner smoking?</div>
         <div>
-          <input id = "questionnare" type="radio" id="MessyNeat1">
-          <label for="MessyNeat1"> Messy </label>
+          <input type="radio" name = "Psmoker" value = "Yes"> Yes
 
-          <input id = "questionnare" type="radio" id="MessyNeat2">
-          <label for="MessyNeat2"> Neat </label>
-        </div>
+         <input type="radio" name = "Psmoker" value = "No"> No
+         <br>
+         <br>
 
+         <div>
+         Importance
+         <select>
+           <option value=1>1</option>
+           <option value=2>2</option>
+           <option value=3>3</option>
+           <option value=4>4</option>
+           <option value=5>5</option>
+           <option value=6>6</option>
+           <option value=7>7</option>
+           <option value=8>8</option>
+           <option value=9>9</option>
+           <option value=10>10</option>
+         </select>
+     </div>
+     <br>
 
-        <p> Would you like a partner to be messy or neat? </p>
+     Do you consider yourself messy or neat?
+     <div>
+       <input type="radio" name = "MessyNeat" value = "Messy">  Messy
+
+        <input type="radio" name = "MessyNeat" value = "Neat">  Neat
+     </div>
+     <br>
+     Would you like a partner to be messy or neat?
+     <div>
+         <input type="radio" name = "PMessyNeat" value = "Messy">  Messy
+
+          <input type="radio" name = "PMessyNeat" value = "Neat">  Neat
+     </div>
+
+     <br>
+     <div>
+     Importance:
+     <select>
+       <option value=1>1</option>
+       <option value=2>2</option>
+       <option value=3>3</option>
+       <option value=4>4</option>
+       <option value=5>5</option>
+       <option value=6>6</option>
+       <option value=7>7</option>
+       <option value=8>8</option>
+       <option value=9>9</option>
+       <option value=10>10</option>
+     </select>
+     </div>
+     <br>
+
+     Are you a dog person or a cat person?
+     <div>
+       <input type="radio" name = "DogCat" value = "Cat">  Cat
+
+       <input type="radio" name = "DogCat" value = "Cat">  Cat
+     </div>
+     <br>
+
+     <div>
+     Importance that your partner is the same
+     <select>
+       <option value=1>1</option>
+       <option value=2>2</option>
+       <option value=3>3</option>
+       <option value=4>4</option>
+       <option value=5>5</option>
+       <option value=6>6</option>
+       <option value=7>7</option>
+       <option value=8>8</option>
+       <option value=9>9</option>
+       <option value=10>10</option>
+     </select>
+     </div>
+     <br>
         <div>
-          <input id = "questionnare" type="radio" id="MessyNeat1">
-          <label for="MessyNeat1"> Messy </label>
-
-          <input id = "questionnare" type="radio" id="MessyNeat2">
-          <label for="MessyNeat2"> Neat </label>
-        </div>
-
-        <p>Importance: </p>
-        <select>
-          <option value=1>1</option>
-          <option value=2>2</option>
-          <option value=3>3</option>
-          <option value=4>4</option>
-          <option value=5>5</option>
-          <option value=6>6</option>
-          <option value=7>7</option>
-          <option value=8>8</option>
-          <option value=9>9</option>
-          <option value=10>10</option>
-        </select>
-
-        <p> Are you a dog person or a cat person. </p>
-        <div>
-          <input id = "questionnare" type="radio" id="MessyNeat1">
-          <label for="MessyNeat1"> Dog </label>
-
-          <input id = "questionnare" type="radio" id="MessyNeat2">
-          <label for="MessyNeat2"> Car </label>
-        </div>
-
-        <p>Importance that your partner is the same: </p>
-        <select>
-          <option value=1>1</option>
-          <option value=2>2</option>
-          <option value=3>3</option>
-          <option value=4>4</option>
-          <option value=5>5</option>
-          <option value=6>6</option>
-          <option value=7>7</option>
-          <option value=8>8</option>
-          <option value=9>9</option>
-          <option value=10>10</option>
-        </select>
-
-
-<br>
-
-    <button id="submit"> <a href = ProfileMatch.html>Submit Quiz</button>
-<br>
-<br>
+        <input id = "submit" type="submit" value="Submit">
+      </fieldset>
+    </form>
 <br>
     <div id="results"></div>
     <div class="navbar">
@@ -298,7 +277,6 @@
       <a href="about.html">About</a>
       <a href="#contact">Contact</a>
     </div>
-
     <script>
     var file = "profileInfo.txt"
     function submitForm(){

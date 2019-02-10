@@ -2,46 +2,41 @@ body {
   background: pink;
   -webkit-animation: mymove 10s infinite; /* Safari 4.0 - 8.0 */
   animation: mymove 10s infinite;
-}
 @-webkit-keyframes mymove {
   50% {background-color: lightblue;}
+  }
+  font-family: "Rajdhani",sans-serif;
+  font-size: 18px;
 }
 
 /* @keyframes mymove {
   50% {background-color: blue;}
 } */
-h1 {
-  text-align: center;
-  font-family: "Ropa Sans", sans-serif;
-  text-size: 50px;
-}
-
-p{
-  text-align: center;
-  font-family: "Ropa Sans", sans-serif;
-  text-size: 50px;
-}
-input{
-    padding: 15px 32px;
-  margin-left: auto;
-  margin-right: auto;
-  display:block;
-}
-button {
+#submit {
   background-color: #F69CDB;
   border: none;
   color: white;
-  padding: 15px 32px;
+  padding: 10px 25px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-family: "Rajdhani", sans-serif;
   font-size: 30px;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
+
 }
-/* * Place the navbar at the bottom of the page, and make it stick */ */
+
+#textBox {
+  padding: 10px 25px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+#profileTitle {
+  font-family: "Rajdhani", sans-serif;
+  font-size: 25px;
+}
+
+/* Place the navbar at the bottom of the page, and make it stick */
 .navbar {
   background-color: #333;
   overflow: hidden;
