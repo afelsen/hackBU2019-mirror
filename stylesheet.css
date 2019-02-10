@@ -15,6 +15,11 @@ h1 {
   font-family: "Ropa Sans", sans-serif;
   font-size: 100px;
 }
+p {
+  text-align: center;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 40px;
+}
 button {
   background-color: #F69CDB;
   border: none;
@@ -63,5 +68,10 @@ img {
 /* Add a color to the active/current link */
 .navbar a.active {
   background-color: #F69CDB;
+  color: white;
+}
+
+#makeAProfile{
+  text-decoration: none;
   color: white;
 }
