@@ -1,4 +1,5 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
+import profiles
 
 app = Flask(__name__)
 
@@ -7,10 +8,18 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
 
-@app.route("/ProfileCreation.html")
-@app.route("/ProfileCreation")
+@app.route("/results.html", methods = ['POST'])
+@app.route('/results', methods = ['POST'])
+def results():
+    Gender = request.form['Gender']
+    return render_template("results.html", Gender = g)
+
+@app.route('/ProfileCreation.html')
+@app.route('/ProfileCreation')
 def ProfileCreation():
     return render_template("ProfileCreation.html")
+
+
 
 @app.route("/about.html")
 @app.route("/about")
@@ -22,7 +31,7 @@ def about():
 def contact():
     return render_template("contact.html")
 
-@app.route("/ProfileMatch.html")
+@app.route("/ProfileMatch.html")#, methods=['POST'])
 @app.route("/ProfileMatch")
 def ProfileMatch():
     return render_template("ProfileMatch.html")
