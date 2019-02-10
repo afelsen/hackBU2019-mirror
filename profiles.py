@@ -26,7 +26,7 @@ class Profile:
 
         #Basic items with scales (age,height,weight)
         self.height = Attribute(height,heightPreference,heightScale)
-        self.weight = Attribute(weight, weightPreference, weightScale)
+        # self.weight = Attribute(weight, weightPreference, weightScale)
         self.age = Attribute(age, agePreference, ageScale)
 
         #Basic items with preferences
@@ -60,8 +60,8 @@ class Profile:
                     if self.__dict__[k].yours != profileList[p].__dict__[k].yours:
                         hatred += 1
 
-
         matchList.append(Oppositeness)
+
     def find_opposite(self,profileList):
 
         matchList = []
