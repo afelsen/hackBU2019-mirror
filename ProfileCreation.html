@@ -10,28 +10,28 @@
   <body>
 
     <h1 id = "profileTitle"> Create Your Profile! </h1>
-    <form action="/action_page.php">
+    <form id = "form1" action="actionpage.php" method = "get">
       <fieldset>
         <legend id = "profileTitle">Personal information:</legend>
         <div id = "profileTitle"> Name: </div>
-        <input id = "textBox" type="text" name="firstname" value="">
+        <input id = "textBox" type="text" name="name" value="">
         <br>
         <br>
         <br>
 
         <div id = "profileTitle"> Gender: </div>
         <div>
-          <input type="radio" name="pgender" value="male" checked> Male
-          <input type="radio" name="pgender" value="female"> Female
-          <input type="radio" name="pgender" value="other"> Other
+          <input type="radio" name="Gender" value="male" checked> Male
+          <input type="radio" name="Gender" value="female"> Female
+          <input type="radio" name="Gender" value="other"> Other
         </div>
         <br>
 
         <div id = "profileTitle"> Preferred Gender: </div>
         <div>
-          <input type="radio" name="gender" value="male" checked> Male
-          <input type="radio" name="gender" value="female"> Female
-          <input type="radio" name="gender" value="other"> Other
+          <input type="radio" name="pGender" value="male" checked> Male
+          <input type="radio" name="pGender" value="female"> Female
+          <input type="radio" name="pGender" value="other"> Other
         </div>
         <br>
         <br>
@@ -129,7 +129,6 @@
           <input type="radio" name = "Politics" value = "Other"> Other
       </div>
 
-          <br>
           <div>Importance that partner has the same politcs
           <select>
             <option value=1>1</option>
@@ -157,9 +156,9 @@
 
         <div id = "profileTitle">Would you like your partner to be an introvert or an extrovert?</div>
         <div>
-          <input type="radio" name = "IntroExtro" value = "Introvert">  Introvert
+          <input type="radio" name = "PIntroExtro" value = "Introvert">  Introvert
 
-          <input type="radio" name = "IntroExtro" value = "Extrovert">  Extrovert
+          <input type="radio" name = "PIntroExtro" value = "Extrovert">  Extrovert
 
           <br>
           Importance:
@@ -190,8 +189,8 @@
           <input type="radio" name = "Psmoker" value = "Yes"> Yes
 
          <input type="radio" name = "Psmoker" value = "No"> No
-         <br>
-         <br>
+
+
 
          <div>
          Importance
@@ -209,22 +208,22 @@
          </select>
      </div>
      <br>
+     <br>
 
-     Do you consider yourself messy or neat?
+     <div id = profileTitle>Do you consider yourself messy or neat?</div>
      <div>
        <input type="radio" name = "MessyNeat" value = "Messy">  Messy
 
         <input type="radio" name = "MessyNeat" value = "Neat">  Neat
      </div>
      <br>
-     Would you like a partner to be messy or neat?
+     <div id = profileTitle>Would you like a partner to be messy or neat?</div>
      <div>
          <input type="radio" name = "PMessyNeat" value = "Messy">  Messy
 
           <input type="radio" name = "PMessyNeat" value = "Neat">  Neat
      </div>
 
-     <br>
      <div>
      Importance:
      <select>
@@ -241,14 +240,13 @@
      </select>
      </div>
      <br>
-
-     Are you a dog person or a cat person?
+     <br>
+     <div id = profileTitle>Are you a dog person or a cat person?</div>
      <div>
-       <input type="radio" name = "DogCat" value = "Cat">  Cat
+       <input type="radio" name = "DogCat" value = "Dog">  Dog
 
        <input type="radio" name = "DogCat" value = "Cat">  Cat
      </div>
-     <br>
 
      <div>
      Importance that your partner is the same
@@ -270,6 +268,7 @@
         <input id = "submit" type="submit" value="Submit">
       </fieldset>
     </form>
+
 <br>
 <br>
 <br>
@@ -279,11 +278,5 @@
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </div>
-    <script>
-    var file = "profileInfo.txt"
-    function submitForm(){
-
-    }
-    </script>
   </body>
 </html>
