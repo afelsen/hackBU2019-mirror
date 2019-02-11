@@ -41,6 +41,18 @@ class Profile:
     def __str__(self):
         return str(self.name)
 
+    def getProfileList(self):
+        return [self.name,
+        self.gender, self.genderPreference,
+        self.height.yours, self.height.preference, self.height.scale,
+        self.age.yours, self.age.preference,
+        self.religion.yours , self.religion.scale,
+        self.politics.yours,self.politics.scale,
+        self.introExtrovert.yours, self.introExtrovert.preference, self.introExtrovert.scale,
+        self.smoke.yours, self.smoke.preference, self.smoke.scale,
+        self.messyNeat.yours, self.messyNeat.preference, self.messyNeat.scale,
+        self.dogCat.yours, self.dogCat.scale]
+
     def find_hated(self,profileList):
         matchList = []
         for p in range(len(profileList)):
@@ -95,7 +107,8 @@ class Profile:
                 worstPerson = i
             print(profileList[i].name + ":" + str(matchList[i]))
         print(matchList)
-        return profileList[worstPerson]
+
+        return profileList[worstPerson].getProfileList()
 
     def find_opposite(self,profileList):
         matchList = []
@@ -127,7 +140,7 @@ class Profile:
                 worstPerson = i
             print(profileList[i].name + ":" + str(matchList[i]))
         print(matchList)
-        return profileList[worstPerson]
+        return profileList[worstPerson].getProfileList()
 
     def find_friend_zone(self,profileList):
         matchList = []
@@ -183,4 +196,4 @@ class Profile:
                 worstPerson = i
             print(profileList[i].name + ":" + str(matchList[i]))
         print(matchList)
-        return profileList[worstPerson]
+        return profileList[worstPerson].getProfileList()

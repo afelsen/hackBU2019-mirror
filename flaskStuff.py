@@ -22,7 +22,7 @@ def results():
     pHeight = request.form['pHeight']
     heightScale = request.form['heightScale']
     Age = request.form['Age']
-    pAge = request.form['pAge1']
+    pAge = request.form['pAge']
     religion = request.form['Religion']
     religionScale = request.form['religionScale']
     politics = request.form['Politics']
@@ -39,50 +39,77 @@ def results():
     dogCat = request.form['DogCat']
     dogCatScale = request.form['dogCatScale']
 
+    #List of all of the values
+    userValues = [name,Gender,PGender,Height,pHeight,heightScale,Age,pAge,religion,religionScale,politics,politicsScale,introExtrovert,pIntroExtrovert,introExtrovertScale,smoke,pSmoke,smokeScale,messyNeat,pMessyNeat, messyNeatScale,dogCat,dogCatScale]
 
-    profile0 = Profile(name,Gender,PGender,Height,pHeight,heightScale,Age,pAge,religion,religionScale,politics,politicsScale,introExtrovert,pIntroExtrovert,introExtrovertScale,smoke,pSmoke,smokeScale,messyNeat,pMessyNeat, messyNeatScale,dogCat,dogCatScale)
+    #Convert values to proper form (turn to integer, list)
+    for i in range(len(userValues)):
+        #Integers
+        if isinstance(userValues[i],int) or userValues[i].isdigit():
+            userValues[i] = int(userValues[i])
+        #List
+        elif len(userValues[i]) > 0 and userValues[i][0] == "[":
+            comma = userValues[i].index(",")
+            num1 = ""
+            num2 = ""
+            for j in range(1,comma):
+                num1 += userValues[i][j]
+            for j in range(comma+1,len(userValues[i])-1):
+                num2 += userValues[i][j]
+            num1 = int(num1)
+            num2 = int(num2)
+            userValues[i] = list(range(num1,num2+1))
 
-    profile1 = Profile("joe","M","F",72,list(range(50,90)),5,20,list(range(18,50)),"Jewish",5,"D",5,"I","E",5,"N","Y",5,"M","M",5,"C",5)
-    profile2 = Profile("Jane","F","M",68,list(range(40,100)),5,19,list(range(18,24)),"Buddhist",5,"I",9,"E","E",5,"Y","Y",5,"N","N",5,"D",5)
-    profile3 = Profile("Mary","F","M",62,list(range(73,77)),2,18,list(range(18,21)),"Christian",1,"R",10,"E","E",7,"N","N",5,"N","M",2,"D",4)
-    profile4 = Profile("Jackie","F","M",65,list(range(67,80)),5,42,list(range(18,30)),"Muslim",5,"R",5,"I","I",5,"N","N",5,"N","N",5,"C",5)
+    #Create profile
+    profile0 = Profile(userValues[0],userValues[1],userValues[2],userValues[3],userValues[4],userValues[5],userValues[6],userValues[7],userValues[8],userValues[9],userValues[10],userValues[11],userValues[12],userValues[13],userValues[14],userValues[15],userValues[16],userValues[17],userValues[18],userValues[19], userValues[20],userValues[21],userValues[22])
 
-    profileList = [profile2,profile1,profile4,profile3]
+    #Junk profiles (for testing)
+    profile1 = Profile("joe","Male","Female",72,list(range(50,90)),5,20,list(range(18,50)),"Jewish",5,"Democrat",5,"Introvert","Extrovert",5,"No","Yes",5,"Messy","Messy",5,"Cat",5)
+    profile2 = Profile("Jane","Female","Male",68,list(range(40,100)),5,19,list(range(18,24)),"Buddhist",5,"Independent",9,"Extrovert","Extrovert",5,"Yes","Yes",5,"Neat","Neat",5,"Dog",5)
+    profile3 = Profile("Mary","Female","Male",62,list(range(73,77)),2,18,list(range(18,21)),"Christian",1,"Republican",10,"Extrovert","Extrovert",7,"No","No",5,"Neat","Messy",2,"Dog",4)
+    profile4 = Profile("Jackie","Female","Male",65,list(range(67,80)),5,42,list(range(18,30)),"Muslim",5,"Republican",5,"Introvert","Introvert",5,"No","No",5,"Neat","Neat",5,"Cat",5)
 
-    opposite = profile0.find_opposite(profileList)
-    newopposite = []
-    i = 0
-    for k in opposite.__dict__:
-        if i>2:
-            for key in opposite.__dict__[k].__dict__:
-                newopposite.append(opposite.__dict__[k].__dict__[key])
-        else:
-            newopposite.append(str(opposite.__dict__[k]))
-        i+=1
+    profileList = [profile1,profile2,profile3,profile4]
 
-    hated = profile0.find_hated(profileList)
-    newhated = []
-    i = 0
-    for k in hated.__dict__:
-        if i>2:
-            for key in hated.__dict__[k].__dict__:
-                newhated.append(hated.__dict__[k].__dict__[key])
-        else:
-            newhated.append(str(hated.__dict__[k]))
-        i+=1
+    newopposite = profile0.find_opposite(profileList)
+    newhated = profile0.find_hated(profileList)
+    newfriend = profile0.find_friend_zone(profileList)
 
-    friend = profile0.find_friend_zone(profileList)
-    newfriend = []
-    i = 0
-    for k in friend.__dict__:
-        if i>2:
-            for key in friend.__dict__[k].__dict__:
-                newfriend.append(friend.__dict__[k].__dict__[key])
-        else:
-            newfriend.append(str(friend.__dict__[k]))
-        i+=1
+    #Printing
+    # opposite = profile0.find_opposite(profileList)
+    # newopposite = []
+    # i = 0
+    # for k in opposite.__dict__:
+    #     if i>2:
+    #         for key in opposite.__dict__[k].__dict__:
+    #             newopposite.append(opposite.__dict__[k].__dict__[key])
+    #     else:
+    #         newopposite.append(str(opposite.__dict__[k]))
+    #     i+=1
+    #
+    # hated = profile0.find_hated(profileList)
+    # newhated = []
+    # i = 0
+    # for k in hated.__dict__:
+    #     if i>2:
+    #         for key in hated.__dict__[k].__dict__:
+    #             newhated.append(hated.__dict__[k].__dict__[key])
+    #     else:
+    #         newhated.append(str(hated.__dict__[k]))
+    #     i+=1
+    #
+    # friend = profile0.find_friend_zone(profileList)
+    # newfriend = []
+    # i = 0
+    # for k in friend.__dict__:
+    #     if i>2:
+    #         for key in friend.__dict__[k].__dict__:
+    #             newfriend.append(friend.__dict__[k].__dict__[key])
+    #     else:
+    #         newfriend.append(str(friend.__dict__[k]))
+    #     i+=1
 
-    return render_template("results.html", answers = ((name,Gender,PGender,Age,pAge,Height,pHeight,heightScale,religion,religionScale,politics,politicsScale,introExtrovert,pIntroExtrovert,introExtrovertScale,smoke,pSmoke,smokeScale,messyNeat,pMessyNeat, messyNeatScale,dogCat,dogCatScale),(newopposite),(newhated),(newfriend)))
+    return render_template("results.html", answers = (userValues,newopposite,newhated,newfriend))
 
 @app.route('/ProfileCreation.html')
 @app.route('/ProfileCreation')
