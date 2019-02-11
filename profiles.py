@@ -3,12 +3,14 @@ class Attribute:
         self.yours = yours
         self.preference = preference
         self.scale = scale
+    # def __str__(self):
+    #     return str(self.yours)
 
 class Profile:
     def __init__(self, name,
     gender, genderPreference,
     height, heightPreference, heightScale,
-    age, agePreference, ageScale,
+    age, agePreference,
     religion, religionScale,
     politics, politicsScale,
     introExtrovert, introExtrovertPreference, introExtrovertScale,
@@ -24,7 +26,7 @@ class Profile:
 
         #Basic items with scales (age,height,weight)
         self.height = Attribute(height,heightPreference,heightScale)
-        self.age = Attribute(age, agePreference, ageScale)
+        self.age = Attribute(age, agePreference,1)
 
         #Basic items with preferences
         self.religion = Attribute(religion, religion, religionScale)
