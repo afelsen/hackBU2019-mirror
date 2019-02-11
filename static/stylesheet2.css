@@ -15,7 +15,7 @@ body {
 #submit {
   background-color: #F69CDB;
   border: none;
-  color: white;
+  color: black;
   padding: 10px 25px;
   text-align: center;
   text-decoration: none;
@@ -23,6 +23,11 @@ body {
   font-family: "Rajdhani", sans-serif;
   font-size: 30px;
 
+}
+
+#submit:hover{
+  background-color: #ffafeb;
+  cursor: pointer;
 }
 
 #textBox {
@@ -54,7 +59,7 @@ body {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 21px;
 }
 
 /* Change the color of links on hover */
@@ -76,7 +81,7 @@ table {
 }
 
 td, th {
-  border: 2px solid #000000;
+  border: `2px solid #000000;
   text-align: left;
   padding: 8px;
 }
