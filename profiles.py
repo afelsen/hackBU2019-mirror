@@ -16,7 +16,7 @@ class Profile:
     introExtrovert, introExtrovertPreference, introExtrovertScale,
     smoke, smokePreference, smokeScale,
     messyNeat, messyNeatPreference, messyNeatScale,
-    dogCat, dogCatScale):
+    dogCat, dogCatScale,robot,email,pic):
 
         #Basic self info
         self.name = name
@@ -38,6 +38,10 @@ class Profile:
         #Random
         self.dogCat = Attribute(dogCat,dogCat, dogCatScale)
 
+        self.robot = robot
+        self.email = email
+        self.pic = pic
+
     def __str__(self):
         return str(self.name)
 
@@ -51,7 +55,7 @@ class Profile:
         self.introExtrovert.yours, self.introExtrovert.preference, self.introExtrovert.scale,
         self.smoke.yours, self.smoke.preference, self.smoke.scale,
         self.messyNeat.yours, self.messyNeat.preference, self.messyNeat.scale,
-        self.dogCat.yours, self.dogCat.scale]
+        self.dogCat.yours, self.dogCat.scale,self.robot]
 
     def find_hated(self,profileList):
         matchList = []
@@ -62,7 +66,7 @@ class Profile:
                 matchList.append(0)
                 continue
             for k in self.__dict__:
-                if k == "name" or k == "gender" or k == "genderPreference" or k == "age":
+                if k == "name" or k == "gender" or k == "genderPreference" or k == "age" or k == "robot" or k == "pic" or k == "email":
                     continue
                 #calculates the amount of difference for hieght, weight, and age
                 elif k == "height":
@@ -119,7 +123,7 @@ class Profile:
                 matchList.append(0)
                 continue
             for k in self.__dict__:
-                if k == "name" or k == "gender" or k == "genderPreference" or k == "age":
+                if k == "name" or k == "gender" or k == "genderPreference" or k == "age" or k == "robot" or k == "pic" or k == "email":
                     continue
                 #calculates the amount of difference for hieght, weight, and age
                 elif k == "height":
@@ -151,7 +155,7 @@ class Profile:
                 matchList.append(0)
                 continue
             for k in self.__dict__:
-                if k == "name" or k == "gender" or k == "genderPreference" or k == "age":
+                if k == "name" or k == "gender" or k == "genderPreference" or k == "age" or k == "robot" or k == "pic" or k == "email":
                     continue
                 #calculates the amount of difference for hieght, weight, and age
                 elif k == "height":
