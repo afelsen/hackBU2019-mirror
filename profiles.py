@@ -55,7 +55,7 @@ class Profile:
         self.introExtrovert.yours, self.introExtrovert.preference, self.introExtrovert.scale,
         self.smoke.yours, self.smoke.preference, self.smoke.scale,
         self.messyNeat.yours, self.messyNeat.preference, self.messyNeat.scale,
-        self.dogCat.yours, self.dogCat.scale,self.robot]
+        self.dogCat.yours, self.dogCat.scale,self.robot, self.email,self.pic]
 
     def find_hated(self,profileList):
         matchList = []
